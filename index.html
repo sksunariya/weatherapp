@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Mulish&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div id="wrapper">
+        <div class="content-container">
+
+            <h1>WEATHER APP</h1>
+
+            <!-- tab- container  -->
+            <div class="tab-container">
+                <div your-weather class="user-tab">Your Weather</div>
+                <div search-weather class="search-tab">Search Weather</div>
+            </div>
+
+
+            <!-- grant location display -->
+            <div grant-location class="location-container">
+                <img src="Images/location.png" width="80" height="80" loading="lazy" alt="">
+                <h2>Grant Location Access</h2>
+                <p>Allow Access To Get Weather Information</p>
+                <button grant-btn class="access-btn">GRANT ACCESS</button>
+            </div>
+            
+            <!-- search weather form  -->
+            <form search-form class="city-search-form">
+                <input search-input placeholder="Search your city..." spellcheck="false" type="text">
+                <button submit-btn type="submit" class="form-btn">
+                    <img src="Images/search.png" width="20" height="20">
+                </button>
+            </form>
+
+
+            <!-- invalid city name -->
+            <div invalid-city class="not-found-container">
+                <img src="Images/not-found.png" alt="">
+                <p>CITY NOT FOUND</p>
+            </div>
+
+
+            <!-- Loading display -->
+            <div loading-screen class="loading-container">
+                <div>
+                    <img src="Images/loading.gif" width="150" height="150" loading="lazy" alt="">
+                </div>
+                <p>Loading...</p>
+            </div>
+
+
+            <!-- your weather and search weather display -->
+            <div full-weather-box class="weather-box">
+                <div class="user-info-container">
+                    <h2 your-Location></h2>
+                    <img countryFlag class="flag-img">
+                </div>
+
+                <p weather-info-text class="weather-desc"></p>
+
+                <img weather-info-img class="weather-img">
+
+                <div class="temp-container">
+                    <p weather-info-temp></p>
+                </div> 
+
+                <div class="weather-details-container">
+                    <div class="fade-div">
+                        <div class="windspeed-container">
+                            <img src="Images/wind.png" class="detail-img" alt="">
+                            <p>WINDSPEED</p>
+                            <p windspeed-value></p>
+                        </div>
+                    </div>
+                    <div class="fade-div">
+                        <div class="humidity-container">
+                            <img src="Images/humidity.png" class="detail-img" alt="">
+                            <p>HUMIDITY</p>
+                            <p humidity-value></p>
+                        </div>
+                    </div>
+                    <div class="fade-div">
+                        <div class="cloud-container">
+                            <img src="Images/cloud.png" class="detail-img" alt="">
+                            <p>CLOUD</p>
+                            <p cloud-value></p>
+                        </div>    
+                    </div>
+                    
+                </div>
+
+            </div>    
+        </div>
+
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
